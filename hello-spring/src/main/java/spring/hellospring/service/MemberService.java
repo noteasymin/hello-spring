@@ -1,12 +1,13 @@
 package spring.hellospring.service;
 
+import org.springframework.stereotype.Service;
 import spring.hellospring.domain.Member;
 import spring.hellospring.repository.MemberRepository;
 
 import java.util.List;
 import java.util.Optional;
 
-
+@Service
 public class MemberService {
 
     private final MemberRepository memberRepository;
