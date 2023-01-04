@@ -97,6 +97,7 @@ public class JdbcMemberRepository implements MemberRepository {
         Connection conn = null;
         PreparedStatement pstmt = null;
         ResultSet rs = null;
+
         try {
             conn = getConnection();
             pstmt = conn.prepareStatement(sql);
@@ -109,6 +110,7 @@ public class JdbcMemberRepository implements MemberRepository {
                 return Optional.of(member);
             }
             return Optional.empty();
+
         } catch (Exception e) {
             throw new IllegalStateException(e);
         } finally {
