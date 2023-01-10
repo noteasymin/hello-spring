@@ -2,6 +2,8 @@ plugins {
 	id 'java'
 	id 'org.springframework.boot' version '2.7.7'
 	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+	id "org.sonarqube" version "3.0"
+
 }
 
 group = 'spring'
@@ -37,3 +39,8 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
+//		./gradlew sonarqube \
+//  -Dsonar.projectKey=hello-spring \
+//  -Dsonar.host.url=http://localhost:9000 \
+//  -Dsonar.login=0a9caa36e71949afdf01f5574529f9adee0d3ce0
